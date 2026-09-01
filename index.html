@@ -13,21 +13,21 @@
 <meta name="twitter:title" content="有限会社青木工業｜江東区亀戸の総合建築工事会社">
 <meta name="twitter:description" content="創業62年、江東区亀戸で新築・耐震補強・リフォームまで一貫対応。建設業許可（般-7）取得の地域密着工務店です。">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23d0241f'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-size='32' font-weight='900' fill='white' text-anchor='middle'%3E%E9%9D%92%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e78c8'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-size='32' font-weight='900' fill='white' text-anchor='middle'%3E%E9%9D%92%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#1a2430;
-    --navy-2:#232f3d;
-    --red:#d0241f;
-    --red-dark:#a81b17;
-    --bg:#f5f6f8;
+    --navy:#123a63;
+    --navy-2:#1c4d80;
+    --red:#1e78c8;
+    --red-dark:#14568f;
+    --bg:#f2f8fd;
     --bg-card:#ffffff;
-    --text:#1a2430;
-    --text-sub:#565f6c;
-    --border:#e1e4ea;
+    --text:#16324f;
+    --text-sub:#4d6478;
+    --border:#d9e6f2;
     --font:'Noto Sans JP', sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -112,7 +112,7 @@
   }
   .hero-bg{
     position:absolute;inset:0;
-    background:linear-gradient(180deg,rgba(15,20,27,.55) 0%,rgba(15,20,27,.55) 40%,rgba(15,20,27,.9) 100%),
+    background:linear-gradient(180deg,rgba(18,58,99,.55) 0%,rgba(18,58,99,.55) 40%,rgba(18,58,99,.9) 100%),
       url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     background-color:var(--navy);
   }
@@ -148,13 +148,67 @@
   .scroll-cue .line{width:1px;height:26px;background:#fff;animation:scrollLine 1.8s infinite;}
   @keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}51%{transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
 
+  /* ===== FLOW ===== */
+  .flow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;position:relative;}
+  .flow-item{
+    background:#fff;border:1px solid var(--border);padding:26px 20px;position:relative;
+  }
+  .flow-item:not(:last-child){border-right:none;}
+  .flow-num{font-size:26px;font-weight:900;color:var(--red);line-height:1;margin-bottom:12px;}
+  .flow-item h3{font-size:15px;font-weight:900;margin-bottom:8px;}
+  .flow-item p{font-size:12.5px;color:var(--text-sub);line-height:1.7;}
+  @media(max-width:760px){
+    .flow-grid{grid-template-columns:1fr;}
+    .flow-item:not(:last-child){border-right:1px solid var(--border);border-bottom:none;}
+  }
+
+  /* ===== FAQ ===== */
+  .faq-list{border-top:1px solid var(--border);}
+  .faq-item{padding:20px 4px;border-bottom:1px solid var(--border);}
+  .faq-q{
+    font-size:14.5px;font-weight:900;color:var(--text);padding-left:30px;position:relative;margin-bottom:8px;
+  }
+  .faq-q::before{content:"Q";position:absolute;left:0;top:-2px;color:var(--red);font-size:16px;font-weight:900;}
+  .faq-a{font-size:13.5px;color:var(--text-sub);padding-left:30px;position:relative;line-height:1.8;}
+  .faq-a::before{content:"A";position:absolute;left:0;top:0;color:var(--text-sub);font-size:13.5px;font-weight:900;}
+
+  /* ===== PRESIDENT PROFILE ===== */
+  .profile-name-row{display:flex;align-items:baseline;gap:14px;margin:22px 0 30px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+  .profile-name-label{font-size:12px;font-weight:900;color:var(--text-sub);letter-spacing:.08em;}
+  .profile-name-value{font-size:22px;font-weight:900;color:var(--text);}
+  .profile-block{margin-bottom:34px;}
+  .profile-block-title{font-size:15px;font-weight:900;color:var(--text);margin-bottom:16px;padding-left:14px;border-left:4px solid var(--red);}
+  .timeline{border-left:2px solid var(--border);margin-left:6px;}
+  .timeline-item{position:relative;padding:0 0 20px 22px;}
+  .timeline-item::before{content:"";position:absolute;left:-6px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--red);}
+  .timeline-year{font-size:12.5px;font-weight:900;color:var(--red);margin-bottom:4px;}
+  .timeline-text{font-size:13.5px;color:var(--text-sub);line-height:1.8;}
+  .qual-columns{column-count:2;column-gap:32px;}
+  .qual-columns li{font-size:13px;color:var(--text-sub);line-height:2;break-inside:avoid;padding-left:14px;position:relative;}
+  .qual-columns li::before{content:"・";position:absolute;left:0;color:var(--red);}
+  .qual-note{font-size:12px;color:var(--text-sub);padding-left:14px;}
+  @media(max-width:640px){
+    .qual-columns{column-count:1;}
+  }
+
+  /* ===== GREETING ===== */
+  .greeting-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;}
+  .greeting-photo{border-radius:6px;overflow:hidden;aspect-ratio:4/5;background-color:#e3edf7;}
+  .greeting-photo img{width:100%;height:100%;object-fit:cover;}
+  .greeting-text{font-size:14.5px;line-height:1.9;color:var(--text-sub);margin-bottom:16px;}
+  .greeting-sign{font-size:14px;font-weight:900;color:var(--text);margin-top:8px;}
+  @media(max-width:760px){
+    .greeting-grid{grid-template-columns:1fr;gap:26px;}
+    .greeting-photo{aspect-ratio:16/10;}
+  }
+
   /* ===== SERVICES ===== */
   .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
   .service-card{
     background:var(--bg-card);border:1px solid var(--border);border-radius:6px;
     overflow:hidden;position:relative;
   }
-  .service-photo{width:100%;aspect-ratio:4/3;background-color:#dfe2e7;overflow:hidden;position:relative;}
+  .service-photo{width:100%;aspect-ratio:4/3;background-color:#e3edf7;overflow:hidden;position:relative;}
   .service-photo img{width:100%;height:100%;object-fit:cover;}
   .service-num{
     position:absolute;top:14px;left:14px;background:var(--red);color:#fff;
@@ -167,7 +221,7 @@
   /* ===== WHY / 選ばれる理由 ===== */
   .why-section{
     position:relative;color:#fff;
-    background:linear-gradient(rgba(15,20,27,.88),rgba(15,20,27,.88)),
+    background:linear-gradient(rgba(18,58,99,.88),rgba(18,58,99,.88)),
       url('https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     background-color:var(--navy);
   }
@@ -181,7 +235,7 @@
   /* ===== WORKS ===== */
   .works-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
   .work-card{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;overflow:hidden;}
-  .work-photo{width:100%;aspect-ratio:4/3;background-color:#dfe2e7;overflow:hidden;}
+  .work-photo{width:100%;aspect-ratio:4/3;background-color:#e3edf7;overflow:hidden;}
   .work-photo img{width:100%;height:100%;object-fit:cover;}
   .work-body{padding:18px 20px;}
   .work-tag{font-size:11px;font-weight:900;color:var(--red);letter-spacing:.06em;margin-bottom:6px;}
@@ -190,7 +244,7 @@
   .work-note{font-size:10.5px;color:#9aa1ab;margin-top:8px;}
   .works-footnote{
     margin-top:28px;font-size:12.5px;color:var(--text-sub);
-    background:#eef0f3;border-radius:6px;padding:14px 18px;
+    background:#e6eef7;border-radius:6px;padding:14px 18px;
   }
 
   /* ===== NEWS ===== */
@@ -201,7 +255,7 @@
   }
   .news-date{color:var(--text-sub);font-weight:700;font-size:13px;flex-shrink:0;width:76px;}
   .news-cat{
-    background:#eef0f3;color:var(--navy);font-size:11px;font-weight:900;
+    background:#e6eef7;color:var(--navy);font-size:11px;font-weight:900;
     padding:3px 10px;border-radius:3px;flex-shrink:0;letter-spacing:.03em;
   }
   .news-text{color:var(--text);}
@@ -216,7 +270,7 @@
   .info-table tr:last-child{border-bottom:none;}
   .info-table th,.info-table td{text-align:left;padding:16px 20px;font-size:14px;vertical-align:top;}
   .info-table th{
-    width:180px;background:#eef0f3;font-weight:700;color:var(--text-sub);font-size:12.5px;
+    width:180px;background:#e6eef7;font-weight:700;color:var(--text-sub);font-size:12.5px;
     letter-spacing:.03em;
   }
   @media(max-width:600px){
@@ -232,7 +286,7 @@
     border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:32px;
   }
   .license-item{flex:1;min-width:240px;}
-  .license-label{font-size:11.5px;font-weight:900;color:#f2a09d;letter-spacing:.1em;margin-bottom:8px;}
+  .license-label{font-size:11.5px;font-weight:900;color:#a9d3f7;letter-spacing:.1em;margin-bottom:8px;}
   .license-value{font-size:19px;font-weight:900;letter-spacing:.02em;}
   .license-sub{font-size:12px;color:#c7ccd4;margin-top:6px;}
 
@@ -252,13 +306,13 @@
 
   /* ===== ACCESS ===== */
   .access-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;}
-  .map-frame{width:100%;height:100%;min-height:340px;border:0;border-radius:6px;background:#dfe2e7;}
+  .map-frame{width:100%;height:100%;min-height:340px;border:0;border-radius:6px;background:#e3edf7;}
   @media(max-width:860px){.access-grid{grid-template-columns:1fr;}}
 
   /* ===== CONTACT ===== */
   .contact-section{
     position:relative;color:#fff;text-align:center;
-    background:linear-gradient(rgba(15,20,27,.93),rgba(15,20,27,.93)),
+    background:linear-gradient(rgba(18,58,99,.93),rgba(18,58,99,.93)),
       url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     background-color:var(--navy);
   }
@@ -274,13 +328,13 @@
   }
 
   /* ===== FOOTER ===== */
-  footer{background:#12181f;color:#8b93a0;padding:48px 0 26px;font-size:12.5px;}
+  footer{background:#0f2b4a;color:#7d97ad;padding:48px 0 26px;font-size:12.5px;}
   .footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;margin-bottom:26px;}
   .footer-brand{font-size:16px;font-weight:900;color:#fff;margin-bottom:8px;}
-  .footer-license{font-size:11.5px;color:#8b93a0;margin-top:4px;}
+  .footer-license{font-size:11.5px;color:#7d97ad;margin-top:4px;}
   .footer-note{
     border-top:1px solid rgba(255,255,255,.1);margin-top:20px;padding-top:16px;
-    font-size:10.5px;color:#616a78;line-height:1.9;
+    font-size:10.5px;color:#5c7690;line-height:1.9;
   }
 
   @media(max-width:600px){
@@ -294,6 +348,7 @@
 <nav class="nav" id="nav">
   <div class="nav-logo">青木工業<small>AOKI KOGYO CO., LTD.</small></div>
   <div class="nav-links">
+    <a href="#profile">社長プロフィール</a>
     <a href="#services">事業内容</a>
     <a href="#why">選ばれる理由</a>
     <a href="#works">施工事例</a>
@@ -328,6 +383,117 @@
   </div>
   <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
 </header>
+
+<section id="greeting">
+  <div class="container">
+    <div class="greeting-grid fade-in">
+      <div class="greeting-photo">
+        <img src="https://images.unsplash.com/photo-1779031242515-205111711b23?auto=format&fit=crop&w=800&q=75" alt="木材を丁寧に扱う職人の手元" loading="lazy">
+      </div>
+      <div class="greeting-body">
+        <div class="section-tag">GREETING</div>
+        <h2 class="section-title"><span class="ph">ご挨拶</span></h2>
+        <p class="greeting-text">江東区亀戸の地で、祖父・父の代から町の鳶職として、地域の皆様のご要望にお応えする仕事を続けてまいりました。そうした環境で育った私は、一級建築士としての立場から、建物を支える構造の大切さを何よりも重んじるようになりました。</p>
+        <p class="greeting-text">現在では、設計から施工までを一貫して手がける工事が全体の7割以上を占めるようになりましたが、これからも地域に根ざした「安心」と「粋」を大切にした住まいづくりを続けてまいります。</p>
+        <p class="greeting-text">常に発注者様の立場に立ち、お気持ちに寄り添いながら設計・施工に取り組んでまいります。社員一同、資格取得を通じて知識と技能の向上に努めており、東京建築士会の建築相談委員としての経験も、日々の家づくりに活かしております。</p>
+        <p class="greeting-sign">有限会社青木工業　代表　青木清美</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="profile" style="background:#e6eef7;">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">PRESIDENT PROFILE</div>
+      <h2 class="section-title"><span class="ph">社長プロフィール</span></h2>
+    </div>
+    <div class="fade-in">
+      <div class="profile-name-row">
+        <span class="profile-name-label">氏名</span>
+        <span class="profile-name-value">青木清美</span>
+      </div>
+
+      <div class="profile-block">
+        <div class="profile-block-title">学歴・職歴</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">昭和46年3月</div>
+            <div class="timeline-text">東京都立江戸川高等学校卒業</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">昭和51年3月</div>
+            <div class="timeline-text">日本大学生産工学部建築工学科卒業</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">昭和51年4月</div>
+            <div class="timeline-text">大都建設株式会社入社。防衛庁陸自茨城補給所庁舎新築工事、ハピーハイツニュー亀戸（マンション）新築工事、建設省小倉宿舎新築工事、野田市清掃工場新築工事等に従事</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">昭和59年4月</div>
+            <div class="timeline-text">有限会社青木工業入社　現在に至る</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-block">
+        <div class="profile-block-title">主な資格</div>
+        <ul class="qual-columns">
+          <li>一級建築士（専攻建築士・設計、生産、法令）</li>
+          <li>一級建築施工管理技士</li>
+          <li>二級土木施工管理技士</li>
+          <li>福祉住環境コーディネーター</li>
+        </ul>
+      </div>
+
+      <div class="profile-block">
+        <div class="profile-block-title">技術・安全関連資格</div>
+        <ul class="qual-columns">
+          <li>建設業監理技術者資格者</li>
+          <li>統括安全衛生責任者</li>
+          <li>地山の掘削作業主任者</li>
+          <li>土止め支保工作業主任者</li>
+          <li>鉄骨の組立て等作業主任者</li>
+          <li>鋼構架設等作業主任者</li>
+          <li>クレーン、建設用リフト特別教育修了</li>
+          <li>ゴンドラ特別教育修了</li>
+          <li>足場の組立て等作業主任者</li>
+          <li>小型移動式クレーン運転技能</li>
+          <li>車両系建設機械運転技能</li>
+          <li>一級小型船舶操縦士（日大理工ヨット部8期主将）</li>
+        </ul>
+      </div>
+
+      <div class="profile-block">
+        <div class="profile-block-title">防災・救命関連</div>
+        <ul class="qual-columns">
+          <li>城東消防団団員</li>
+          <li>上級救命技能認定者</li>
+          <li>応急手当指導員</li>
+        </ul>
+        <p class="qual-note">→ 平成15年6月、人命救助活動により消防総監賞受賞</p>
+      </div>
+
+      <div class="profile-block" style="margin-bottom:0;">
+        <div class="profile-block-title">公的委嘱・社会貢献</div>
+        <ul class="qual-columns">
+          <li>(社)東京建築士会・建築相談委員会委員長</li>
+          <li>墨田区建築紛争相談員</li>
+          <li>国土交通省・住宅性能評価員</li>
+          <li>東京都・（建築物）応急危険度判定員</li>
+          <li>被災宅地危険度判定士</li>
+          <li>震災建物被災度区分判定・復旧技術者</li>
+          <li>既存住宅状況調査技術者（国土交通省）</li>
+          <li>東京弁護士会　住宅紛争処理委員</li>
+          <li>第一東京弁護士会　住宅紛争処理委員</li>
+          <li>第二東京弁護士会　住宅紛争処理委員</li>
+          <li>東京地方裁判所・専門委員（建築訴訟）、調停委員（建築調停）、鑑定委員</li>
+        </ul>
+        <p class="qual-note">→ 平成16年 中越地震時 災害派遣　／　平成19年 中越沖地震時 災害派遣</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="services">
   <div class="container">
@@ -385,7 +551,7 @@
 <section id="why" class="why-section">
   <div class="container">
     <div class="fade-in">
-      <div class="section-tag" style="color:#f2a09d;">WHY US</div>
+      <div class="section-tag" style="color:#a9d3f7;">WHY US</div>
       <h2 class="section-title"><span class="ph">選ばれる理由</span></h2>
       <p class="section-lead">許可と実績、そして一貫対応。数字でご覧いただける裏付けがあります。</p>
     </div>
@@ -454,12 +620,92 @@
           <p>建物全体を見渡した計画のもとで進めた改修工事です。</p>
         </div>
       </div>
+      <div class="work-card fade-in">
+        <div class="work-photo"><img src="https://images.unsplash.com/photo-1555945071-f36c590968bb?auto=format&fit=crop&w=800&q=80" alt="耐震補強工事のイメージ" loading="lazy"></div>
+        <div class="work-body">
+          <div class="work-tag">耐震補強工事</div>
+          <h3>建物の耐震補強工事</h3>
+          <p>既存建物の耐震診断をふまえた補強工事にも対応しています。</p>
+        </div>
+      </div>
+      <div class="work-card fade-in">
+        <div class="work-photo"><img src="https://images.unsplash.com/photo-1760708626681-59a5373819a6?auto=format&fit=crop&w=800&q=80" alt="外構・土木工事のイメージ" loading="lazy"></div>
+        <div class="work-body">
+          <div class="work-tag">外構工事</div>
+          <h3>外構・土木工事</h3>
+          <p>駐車場整備や外構工事など、建物まわりの土木工事も承ります。</p>
+        </div>
+      </div>
     </div>
-    <p class="works-footnote fade-in">※ 掲載写真は現在のホームページで公開されている施工実績を使用しています。最新の施工写真をご提供いただければ、随時追加・差し替えいたします。</p>
+    <p class="works-footnote fade-in">※ 新築・改修の4点は同社の施工実績ページで公開されている実際の写真、耐震補強・外構の2点はイメージ写真です。実際の施工写真をご提供いただければ差し替えいたします。</p>
   </div>
 </section>
 
-<section id="company" style="background:#eef0f3;">
+<section id="flow" style="background:#e6eef7;">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">FLOW</div>
+      <h2 class="section-title"><span class="ph">ご依頼の流れ</span></h2>
+      <p class="section-lead">お問い合わせから工事完了まで、担当者が一貫してサポートいたします。</p>
+    </div>
+    <div class="flow-grid">
+      <div class="flow-item fade-in">
+        <div class="flow-num">01</div>
+        <h3>お問い合わせ</h3>
+        <p>お電話またはメールにて、工事内容・お困りごとをお聞かせください。</p>
+      </div>
+      <div class="flow-item fade-in">
+        <div class="flow-num">02</div>
+        <h3>現地調査・お見積り</h3>
+        <p>担当者が現地を確認のうえ、お見積りをご提示します。</p>
+      </div>
+      <div class="flow-item fade-in">
+        <div class="flow-num">03</div>
+        <h3>ご契約</h3>
+        <p>工事内容・金額にご納得いただいたうえで、ご契約となります。</p>
+      </div>
+      <div class="flow-item fade-in">
+        <div class="flow-num">04</div>
+        <h3>着工</h3>
+        <p>近隣へのご挨拶を含め、安全に配慮しながら工事を進めます。</p>
+      </div>
+      <div class="flow-item fade-in">
+        <div class="flow-num">05</div>
+        <h3>完了・アフターフォロー</h3>
+        <p>お引き渡し後も、気になる点があればお気軽にご連絡ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title"><span class="ph">よくある質問</span></h2>
+    </div>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <div class="faq-q">対応エリア外でも相談できますか？</div>
+        <div class="faq-a">江東区亀戸を中心とした東京23区一円に対応しております。エリア外の場合もまずはお電話でご相談ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">小規模な工事や部分的な修繕も依頼できますか？</div>
+        <div class="faq-a">新築・大規模改修だけでなく、水まわりなどの部分的なリフォームにも対応しております。お気軽にご相談ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">お見積りは無料ですか？</div>
+        <div class="faq-a">現地調査・お見積りは無料で承っております。内容にご納得いただいてからのご契約となります。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">土日でも対応してもらえますか？</div>
+        <div class="faq-a">通常受付は平日8:00〜18:00ですが、土日のご相談も応相談で対応しております。まずはお電話ください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="company" style="background:#e6eef7;">
   <div class="container">
     <div class="fade-in">
       <div class="section-tag">COMPANY</div>
@@ -483,7 +729,7 @@
 <section id="license" class="license-section">
   <div class="container">
     <div class="fade-in">
-      <div class="section-tag" style="color:#f2a09d;">LICENSE</div>
+      <div class="section-tag" style="color:#a9d3f7;">LICENSE</div>
       <h2 class="section-title"><span class="ph">建設業許可・資格</span></h2>
       <p class="section-lead" style="color:#c7ccd4;">確かな許可と登録に基づいて工事を行っています。</p>
     </div>
@@ -538,7 +784,7 @@
   <div class="container">
     <div class="recruit-flex fade-in">
       <div class="recruit-text">
-        <div class="section-tag" style="color:#f2a09d;">RECRUIT</div>
+        <div class="section-tag" style="color:#a9d3f7;">RECRUIT</div>
         <h2 class="section-title"><span class="ph">採用情報</span></h2>
         <p style="color:#e4e7ec;font-size:14.5px;max-width:520px;">
           創業62年、亀戸の地で建築の仕事に携わってきた青木工業では、一緒に街づくりを担う仲間を募集しています。経験者はもちろん、未経験からのご応募も歓迎です。
@@ -578,7 +824,7 @@
 <section id="contact" class="contact-section">
   <div class="container">
     <div class="fade-in">
-      <div class="section-tag" style="color:#f2a09d;">CONTACT</div>
+      <div class="section-tag" style="color:#a9d3f7;">CONTACT</div>
       <h2 class="section-title"><span class="ph">お問い合わせ</span></h2>
       <p style="color:#c7ccd4;">工事のご相談・お見積もりなど、お気軽にお電話ください。</p>
       <a class="contact-tel-link" href="tel:0336840184">
